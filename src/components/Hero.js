@@ -64,7 +64,7 @@ export default function Hero() {
             {[
               { val: '30 – 60', unit: 'days', label: 'Average approval time', color: '#E8D5A3' },
               { val: '500+', unit: '', label: 'Permits successfully filed', color: '#E8D5A3' },
-              { val: '5', unit: 'Agencies', label: 'Coordinated on your behalf', color: '#C0BAB4' },
+              { val: '5', unit: 'Agencies', label: 'Coordinated on your behalf', color: '#E8D5A3' },
             ].map((s, i) => (
               <motion.div key={s.label}
                 initial={{ opacity: 0, x: 20 }}
