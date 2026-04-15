@@ -61,7 +61,7 @@ export default function FAQ() {
 
   return (
     <section id="faq" className="py-24 md:py-32 px-6">
-      <br /> <br /> <br />
+      <br /> <br />
       <div className="max-w-6xl mx-auto" ref={ref}>
         <div className="grid md:grid-cols-[300px_1fr] gap-12 md:gap-20 items-start">
           <div className="md:sticky md:top-28">
@@ -78,7 +78,7 @@ export default function FAQ() {
               initial={{ opacity: 0 }}
               animate={inView ? { opacity: 1 } : {}}
               transition={{ duration: 0.6, delay: 0.3 }}
-              href="#contact"
+              href="contact"
               className="link-line inline-flex items-center gap-2 text-sm font-medium text-[#A0A0A0] hover:text-[#E8D5A3] no-underline transition-colors"
             >
               Still have Questions? →

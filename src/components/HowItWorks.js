@@ -52,7 +52,7 @@ export default function HowItWorks() {
 
   return (
     <section id="how" className="py-24 md:py-32 px-6">
-      <br /> <br /> <br />
+      <br /> <br />
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-[340px_1fr] gap-12 md:gap-20">
           <div className="md:sticky md:top-28 md:self-start" ref={headerRef}>

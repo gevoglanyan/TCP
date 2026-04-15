@@ -19,7 +19,7 @@ export default function Requirements() {
 
   return (
     <section id="requirements" className="py-24 md:py-32 px-6 bg-[#0C0C0C]">
-      <br /> <br /> <br />
+      <br /> <br />
       <div className="max-w-6xl mx-auto" ref={ref}>
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
           <div>

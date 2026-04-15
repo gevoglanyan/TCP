@@ -17,7 +17,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="py-24 md:py-32 px-6">
-      <br /> <br /> <br />
+      <br /> <br />
       <div className="max-w-6xl mx-auto" ref={ref}>
         <div className="grid grid-cols-1 md:grid-cols-[1fr_1.5fr] gap-12 md:gap-20 items-start">
           <div className="md:sticky md:top-28">
