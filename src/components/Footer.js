@@ -46,7 +46,7 @@ export default function Footer() {
           className="mt-8 pt-6 border-t border-[#1A1A1A] flex flex-col sm:flex-row items-center justify-between gap-3"
         >
           <p className="text-[0.62rem] font-mono text-[#888888]/30 tracking-wider">
-            © {new Date().getFullYear()} TCPFast. All rights reserved.
+            © {new Date().getFullYear()} TCPFast. All Rights Reserved.
           </p>
           <p className="text-[0.62rem] font-mono text-[#888888]/30 tracking-wider">
             California TCP Permit Specialists
