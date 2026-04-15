@@ -33,7 +33,7 @@ export default function Contact() {
             <motion.div initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}} transition={{ duration: 0.6, delay: 0.3 }}
               className="flex flex-col gap-4">
               {[
-                { label: 'Email', val: 'permits@tcpfast.com' },
+                { label: 'Email', val: 'tcpservices4you@gmail.com' },
                 { label: 'Phone', val: '(323) 841-5151' },
                 { label: 'Hours', val: 'Mon – Fri, 9am – 6pm PST' },
               ].map((c) => (
