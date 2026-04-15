@@ -14,6 +14,7 @@ export default function Nav() {
 
   const links = [
     { label: 'Process', href: '/process' },
+    { label: 'Requirements', href: '/requirements' },
     { label: 'Pricing', href: '/pricing' },
     { label: 'FAQ', href: '/faq' },
     { label: 'Contact', href: '/contact' },
