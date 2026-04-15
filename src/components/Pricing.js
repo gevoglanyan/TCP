@@ -28,7 +28,7 @@ export default function Pricing() {
 
   return (
     <section id="pricing" className="py-24 md:py-32 px-6">
-      <br /> <br /> <br /> <br />  
+      <br /> <br /> <br />
       <div className="max-w-6xl mx-auto" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 16 }}
@@ -36,7 +36,6 @@ export default function Pricing() {
           transition={{ duration: 0.6 }}
           className="text-center mb-14"
         >
-          <p className="text-[0.65rem] font-mono font-medium text-[#E8D5A3] tracking-widest uppercase mb-3">/ Pricing</p>
           <h2 className="font-display text-4xl md:text-5xl font-bold text-[#F5F2ED] tracking-tight mb-3">Two Permit Types</h2>
           <p className="text-sm text-[#B0AAA4] max-w-sm mx-auto font-light leading-relaxed">
             State fees paid directly to the CPUC. Our service fee is quoted separately — clearly — before you commit.

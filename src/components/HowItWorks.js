@@ -52,18 +52,10 @@ export default function HowItWorks() {
 
   return (
     <section id="how" className="py-24 md:py-32 px-6">
-      <br /> <br /> <br /> <br /> 
+      <br /> <br /> <br />
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-[340px_1fr] gap-12 md:gap-20">
           <div className="md:sticky md:top-28 md:self-start" ref={headerRef}>
-            <motion.p
-              initial={{ opacity: 0, y: 12 }}
-              animate={headerInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5 }}
-              className="text-[0.65rem] font-mono font-medium text-[#E8D5A3] tracking-widest uppercase mb-4"
-            >
-              / Process
-            </motion.p>
             <motion.h2
               initial={{ opacity: 0, y: 16 }}
               animate={headerInView ? { opacity: 1, y: 0 } : {}}

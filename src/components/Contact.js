@@ -17,14 +17,10 @@ export default function Contact() {
 
   return (
     <section id="contact" className="py-24 md:py-32 px-6">
-      <br /> <br /> <br /> <br /> 
+      <br /> <br /> <br />
       <div className="max-w-6xl mx-auto" ref={ref}>
         <div className="grid grid-cols-1 md:grid-cols-[1fr_1.5fr] gap-12 md:gap-20 items-start">
           <div className="md:sticky md:top-28">
-            <motion.p initial={{ opacity: 0, y: 10 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5 }}
-              className="text-[0.65rem] font-mono font-medium text-[#E8D5A3] tracking-widest uppercase mb-3">
-              / Get Started
-            </motion.p>
             <motion.h2 initial={{ opacity: 0, y: 16 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.1 }}
               className="font-display text-4xl md:text-5xl font-bold text-[#F5F2ED] leading-tight tracking-tight mb-4">
               Let's get<br />
