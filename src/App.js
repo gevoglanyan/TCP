@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import Process from './pages/Process';
 import Requirements from './pages/Requirements';
@@ -12,6 +13,7 @@ import './App.css';
 export default function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <div className="bg-[#0C0C0C] overflow-x-hidden">
         <Nav />
         <Routes>
