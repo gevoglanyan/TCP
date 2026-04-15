@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
@@ -56,7 +56,7 @@ export default function Nav() {
           </div>
 
           <button onClick={() => setOpen(!open)}
-            className="flex md:hidden w-10 h-10 items-center justify-center rounded-full border border-[#2A2A2A] bg-transparent cursor-pointer">
+            className="flex md:hidden w-10 h-10 items-center justify-center bg-transparent cursor-pointer">
             <div className="flex flex-col gap-1.5 w-4">
               <span className={`block h-px bg-[#F0EDE8] transition-all duration-300 ${open ? 'rotate-45 translate-y-[7px]' : ''}`} />
               <span className={`block h-px bg-[#F0EDE8] transition-all duration-300 ${open ? 'opacity-0' : ''}`} />
@@ -66,24 +66,16 @@ export default function Nav() {
         </div>
       </motion.nav>
 
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.2 }}
-            className="fixed top-16 left-0 right-0 z-40 bg-[#141414] border-b border-[#2A2A2A] px-6 py-6 flex flex-col gap-1"
-          >
-            {links.map((l) => (
-              <Link key={l.label} to={l.href} onClick={() => setOpen(false)}
-                className="py-3.5 text-base font-medium text-[#F0EDE8] no-underline border-b border-[#1A1A1A] last:border-0">
-                {l.label}
-              </Link>
-            ))}
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {open && (
+        <div className="fixed top-16 left-0 right-0 z-40 bg-[#141414] border-b border-[#2A2A2A] px-6 py-6 flex flex-col gap-1">
+          {links.map((l) => (
+            <Link key={l.label} to={l.href} onClick={() => setOpen(false)}
+              className="py-3.5 text-base font-medium text-[#F0EDE8] no-underline border-b border-[#1A1A1A] last:border-0">
+              {l.label}
+            </Link>
+          ))}
+        </div>
+      )}
     </>
   );
 }
