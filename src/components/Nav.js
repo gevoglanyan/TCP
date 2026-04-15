@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
@@ -22,14 +21,9 @@ export default function Nav() {
 
   return (
     <>
-      <motion.nav
-        initial={{ y: -20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, ease: 'easeOut' }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled ? 'bg-[#0C0C0C]/95 backdrop-blur-xl border-b border-[#2A2A2A]' : 'bg-transparent'
-        }`}
-      >
+      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        scrolled ? 'bg-[#0C0C0C]/95 backdrop-blur-xl border-b border-[#2A2A2A]' : 'bg-transparent'
+      }`}>
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <Link to="/" className="font-display text-lg font-bold text-[#F0EDE8] no-underline tracking-tight">
             TCP<span className="text-[#E8D5A3]">Fast</span>
@@ -56,7 +50,7 @@ export default function Nav() {
           </div>
 
           <button onClick={() => setOpen(!open)}
-            className="flex md:hidden w-10 h-10 items-center justify-center bg-transparent cursor-pointer">
+            className="flex md:hidden w-10 h-10 items-center justify-center bg-transparent cursor-pointer border-none">
             <div className="flex flex-col gap-1.5 w-4">
               <span className={`block h-px bg-[#F0EDE8] transition-all duration-300 ${open ? 'rotate-45 translate-y-[7px]' : ''}`} />
               <span className={`block h-px bg-[#F0EDE8] transition-all duration-300 ${open ? 'opacity-0' : ''}`} />
@@ -64,7 +58,7 @@ export default function Nav() {
             </div>
           </button>
         </div>
-      </motion.nav>
+      </nav>
 
       {open && (
         <div className="fixed top-16 left-0 right-0 z-40 bg-[#141414] border-b border-[#2A2A2A] px-6 py-6 flex flex-col gap-1">
