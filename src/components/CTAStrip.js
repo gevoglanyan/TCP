@@ -31,7 +31,7 @@ export default function CTAStrip() {
               Clear plan. Clear price. No commitment required to get started.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-3">
-              <a href="#contact"
+              <a href="contact"
                 className="inline-flex items-center justify-center gap-2 bg-[#0C0C0C] hover:bg-[#1A1A1A] text-[#F0EDE8] font-bold text-sm px-8 py-4 rounded-full no-underline transition-all duration-200 hover:scale-105">
                 Start Free Consultation →
               </a>

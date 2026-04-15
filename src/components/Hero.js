@@ -8,7 +8,7 @@ const fadeUp = (delay = 0) => ({
 
 export default function Hero() {
   return (
-    <section id="top" className="relative min-h-screen flex flex-col justify-center pt-16 overflow-hidden">
+    <section id="top" className="relative min-h-[80vh] flex flex-col justify-center pt-16 overflow-hidden">
       <div className="absolute inset-0 opacity-[0.035]"
         style={{
           backgroundImage: 'linear-gradient(#F5F2ED 1px, transparent 1px), linear-gradient(90deg, #F5F2ED 1px, transparent 1px)',
@@ -19,7 +19,7 @@ export default function Hero() {
         style={{ background: 'radial-gradient(circle, rgba(232,213,163,0.07) 0%, transparent 70%)' }}
       />
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 py-20 md:py-32">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 py-12 md:py-16">
         <div className="grid md:grid-cols-[1fr_380px] gap-12 md:gap-20 items-center">
           <div>
             <motion.div {...fadeUp(0)}
@@ -41,14 +41,14 @@ export default function Hero() {
             </motion.p>
 
             <motion.div {...fadeUp(0.3)} className="flex flex-col sm:flex-row gap-3">
-              <a href="#contact"
+              <a href="contact"
                 className="inline-flex items-center justify-center gap-2 bg-[#E8D5A3] hover:bg-[#F0E4B8] text-[#0C0C0C] font-bold text-sm px-8 py-4 rounded-full no-underline transition-all duration-200 hover:scale-105">
                 Start Your Application
                 <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                   <path d="M5 12h14M12 5l7 7-7 7"/>
                 </svg>
               </a>
-              <a href="#how"
+              <a href="process"
                 className="inline-flex items-center justify-center gap-2 bg-transparent text-[#C0BAB4] hover:text-[#F5F2ED] font-medium text-sm px-8 py-4 rounded-full no-underline border border-[#2A2A2A] hover:border-[#3A3A3A] transition-all duration-200">
                 How it Works
               </a>
@@ -63,7 +63,7 @@ export default function Hero() {
           >
             {[
               { val: '30 – 60', unit: 'days', label: 'Average approval time', color: '#E8D5A3' },
-              { val: '500+', unit: '', label: 'Permits successfully filed', color: '#4ADE80' },
+              { val: '500+', unit: '', label: 'Permits successfully filed', color: '#E8D5A3' },
               { val: '5', unit: 'Agencies', label: 'Coordinated on your behalf', color: '#C0BAB4' },
             ].map((s, i) => (
               <motion.div key={s.label}
@@ -105,7 +105,7 @@ export default function Hero() {
           {[
             { val: '30–60d', label: 'Approval' },
             { val: '500+', label: 'Permits' },
-            { val: '4', label: 'Agencies' },
+            { val: '5', label: 'Agencies' },
           ].map((s) => (
             <div key={s.label} className="text-center">
               <div className="font-display text-xl font-bold text-[#E8D5A3]">{s.val}</div>
@@ -114,20 +114,6 @@ export default function Hero() {
           ))}
         </motion.div>
       </div>
-
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.2, duration: 0.6 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
-      >
-        <span className="text-[0.62rem] text-[#A0A0A0] tracking-widest uppercase font-medium">Scroll</span>
-        <motion.div
-          animate={{ y: [0, 6, 0] }}
-          transition={{ repeat: Infinity, duration: 1.6, ease: 'easeInOut' }}
-          className="w-px h-8 bg-gradient-to-b from-[#2A2A2A] to-transparent"
-        />
-      </motion.div>
     </section>
   );
 }

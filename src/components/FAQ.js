@@ -61,6 +61,7 @@ export default function FAQ() {
 
   return (
     <section id="faq" className="py-24 md:py-32 px-6">
+      <br /> <br /> 
       <div className="max-w-6xl mx-auto" ref={ref}>
         <div className="grid md:grid-cols-[300px_1fr] gap-12 md:gap-20 items-start">
           <div className="md:sticky md:top-28">

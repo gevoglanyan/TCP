@@ -1,11 +1,12 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const links = [
-  { label: 'Process', href: '#how' },
-  { label: 'Requirements', href: '#requirements' },
-  { label: 'Pricing', href: '#pricing' },
-  { label: 'FAQ', href: '#faq' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Process', href: '/process' },
+  { label: 'Requirements', href: '/requirements' },
+  { label: 'Pricing', href: '/pricing' },
+  { label: 'FAQ', href: '/faq' },
+  { label: 'Contact', href: '/contact' },
 ];
 
 export default function Footer() {
@@ -18,20 +19,24 @@ export default function Footer() {
             viewport={{ once: true }} transition={{ duration: 0.6 }}
             className="font-display text-lg font-bold text-[#F0EDE8] tracking-tight"
           >
-            TCP<span className="text-[#E8D5A3]">Fast</span>
+            <Link to="/" className="no-underline text-[#F0EDE8]">
+              TCP<span className="text-[#E8D5A3]">Fast</span>
+            </Link>
           </motion.div>
+
           <motion.div
             initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}
             viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.1 }}
             className="flex gap-6 flex-wrap justify-center"
           >
             {links.map((l) => (
-              <a key={l.label} href={l.href}
+              <Link key={l.label} to={l.href}
                 className="link-line text-xs text-[#888888] hover:text-[#F0EDE8] no-underline transition-colors duration-200 font-light">
                 {l.label}
-              </a>
+              </Link>
             ))}
           </motion.div>
+
           <motion.div
             initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}
             viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}
@@ -40,17 +45,12 @@ export default function Footer() {
             NOT AFFILIATED WITH CPUC · DMV · CHP
           </motion.div>
         </div>
+
         <motion.div
           initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}
           viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-8 pt-6 border-t border-[#1A1A1A] flex flex-col sm:flex-row items-center justify-between gap-3"
+          className="mt-8 pt-6 border-t border-[#1A1A1A] flex items-center justify-center"
         >
-          <p className="text-[0.62rem] font-mono text-[#888888]/30 tracking-wider">
-            © {new Date().getFullYear()} TCPFast. All Rights Reserved.
-          </p>
-          <p className="text-[0.62rem] font-mono text-[#888888]/30 tracking-wider">
-            California TCP Permit Specialists
-          </p>
         </motion.div>
       </div>
     </footer>

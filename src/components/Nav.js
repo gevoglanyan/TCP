@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Nav() {
@@ -12,9 +13,10 @@ export default function Nav() {
   }, []);
 
   const links = [
-    { label: 'Process', href: '#how' },
-    { label: 'Pricing', href: '#pricing' },
-    { label: 'FAQ', href: '#faq' },
+    { label: 'Process', href: '/process' },
+    { label: 'Pricing', href: '/pricing' },
+    { label: 'FAQ', href: '/faq' },
+    { label: 'Contact', href: '/contact' },
   ];
 
   return (
@@ -28,16 +30,16 @@ export default function Nav() {
         }`}
       >
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-          <a href="#top" className="font-display text-lg font-bold text-[#F0EDE8] no-underline tracking-tight">
+          <Link to="/" className="font-display text-lg font-bold text-[#F0EDE8] no-underline tracking-tight">
             TCP<span className="text-[#E8D5A3]">Fast</span>
-          </a>
+          </Link>
 
           <div className="hidden md:flex items-center gap-8">
             {links.map((l) => (
-              <a key={l.label} href={l.href}
+              <Link key={l.label} to={l.href}
                 className="link-line text-sm font-medium text-[#888888] hover:text-[#F0EDE8] no-underline transition-colors duration-200">
                 {l.label}
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -46,10 +48,10 @@ export default function Nav() {
               className="text-sm font-medium text-[#888888] hover:text-[#F0EDE8] no-underline transition-colors">
               (323) 841-5151
             </a>
-            <a href="#contact"
+            <Link to="/contact"
               className="text-sm font-bold bg-[#E8D5A3] hover:bg-[#F0E4B8] text-[#0C0C0C] px-5 py-2.5 rounded-full no-underline transition-all duration-200 hover:scale-105">
               Get Started
-            </a>
+            </Link>
           </div>
 
           <button onClick={() => setOpen(!open)}
@@ -73,15 +75,11 @@ export default function Nav() {
             className="fixed top-16 left-0 right-0 z-40 bg-[#141414] border-b border-[#2A2A2A] px-6 py-6 flex flex-col gap-1"
           >
             {links.map((l) => (
-              <a key={l.label} href={l.href} onClick={() => setOpen(false)}
+              <Link key={l.label} to={l.href} onClick={() => setOpen(false)}
                 className="py-3.5 text-base font-medium text-[#F0EDE8] no-underline border-b border-[#1A1A1A] last:border-0">
                 {l.label}
-              </a>
+              </Link>
             ))}
-            <a href="#contact" onClick={() => setOpen(false)}
-              className="mt-4 py-4 text-base font-bold bg-[#E8D5A3] text-[#0C0C0C] text-center rounded-2xl no-underline">
-              Get Started →
-            </a>
           </motion.div>
         )}
       </AnimatePresence>

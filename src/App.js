@@ -1,30 +1,29 @@
-import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Nav from './components/Nav';
-import Hero from './components/Hero';
-import Marquee from './components/Marquee';
-import HowItWorks from './components/HowItWorks';
-import Requirements from './components/Requirements';
-import Pricing from './components/Pricing';
-import Timeline from './components/Timeline';
-import FAQ from './components/FAQ';
-import CTAStrip from './components/CTAStrip';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Home from './pages/Home';
+import Process from './pages/Process';
+import Requirements from './pages/Requirements';
+import Pricing from './pages/Pricing';
+import FAQ from './pages/FAQ';
+import Contact from './pages/Contact';
+import './App.css';
 
 export default function App() {
   return (
-    <div className="bg-[#0C0C0C] overflow-x-hidden">
-      <Nav />
-      <Hero />
-      <Marquee />
-      <HowItWorks />
-      <Requirements />
-      <Pricing />
-      <Timeline />
-      <FAQ />
-      <CTAStrip />
-      <Contact />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className="bg-[#0C0C0C] overflow-x-hidden">
+        <Nav />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/process" element={<Process />} />
+          <Route path="/requirements" element={<Requirements />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/faq" element={<FAQ />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
