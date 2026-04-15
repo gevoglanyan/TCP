@@ -28,7 +28,7 @@ export default function Pricing() {
 
   return (
     <section id="pricing" className="py-24 md:py-32 px-6">
-      <br /> <br /> 
+      <br /> <br /> <br /> <br />  
       <div className="max-w-6xl mx-auto" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 16 }}

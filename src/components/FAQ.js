@@ -61,7 +61,7 @@ export default function FAQ() {
 
   return (
     <section id="faq" className="py-24 md:py-32 px-6">
-      <br /> <br /> 
+      <br /> <br /> <br /> <br /> 
       <div className="max-w-6xl mx-auto" ref={ref}>
         <div className="grid md:grid-cols-[300px_1fr] gap-12 md:gap-20 items-start">
           <div className="md:sticky md:top-28">
@@ -80,7 +80,7 @@ export default function FAQ() {
               className="font-display text-4xl md:text-5xl font-bold text-[#F5F2ED] leading-tight tracking-tight mb-4"
             >
               Questions<br />
-              <span className="text-[#A0A0A0] font-light">answered.</span>
+              <span className="text-[#A0A0A0] font-light">Answered.</span>
             </motion.h2>
             <motion.a
               initial={{ opacity: 0 }}
