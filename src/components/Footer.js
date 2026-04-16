@@ -12,6 +12,7 @@ const links = [
 export default function Footer() {
   return (
     <footer className="border-t border-[#1A1A1A] px-6 py-10 bg-[#0C0C0C]">
+      <br /> <br /> 
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6 flex-wrap">
           <motion.div

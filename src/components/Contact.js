@@ -158,7 +158,7 @@ export default function Contact() {
             </button>
 
             <p className="text-[0.62rem] font-mono text-[#888888]/40 text-center tracking-wide">
-              No commitment required · Response within 1 business day
+              No commitment required <br/> Response within 1 business day
             </p>
           </motion.form>
         </div>

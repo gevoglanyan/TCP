@@ -78,7 +78,7 @@ export default function FAQ() {
               className="font-display text-4xl md:text-5xl font-bold text-[#F0EDE8] leading-tight tracking-tight mb-4"
             >
               Questions<br />
-              <span className="text-[#A0A0A0] font-light">answered.</span>
+              <span className="text-[#A0A0A0] font-light">Answered.</span>
             </motion.h2>
             <motion.p
               initial={{ opacity: 0 }}
