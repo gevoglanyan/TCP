@@ -5,7 +5,7 @@ const stats = [
   { val: '10+', label: 'Years of experience' },
   { val: '500+', label: 'Permits filed' },
   { val: '100%', label: 'California coverage' },
-  { val: '4', label: 'State agencies handled' },
+  { val: '5', label: 'State agencies handled' },
 ];
 
 export default function AboutUs() {
