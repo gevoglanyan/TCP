@@ -8,6 +8,7 @@ import Requirements from './pages/Requirements';
 import Pricing from './pages/Pricing';
 import FAQ from './pages/FAQ';
 import Contact from './pages/Contact';
+import About from './pages/About';
 import './App.css';
 
 export default function App() {
@@ -22,6 +23,7 @@ export default function App() {
           <Route path="/requirements" element={<Requirements />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/faq" element={<FAQ />} />
+          <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />

@@ -12,11 +12,13 @@ export default function Nav() {
   }, []);
 
   const links = [
+    { label:'About', href: '/about' },
     { label: 'Process', href: '/process' },
     { label: 'Requirements', href: '/requirements' },
     { label: 'Services & Pricing', href: '/pricing' },
     { label: 'FAQ', href: '/faq' },
     { label: 'Contact', href: '/contact' },
+    
   ];
 
   return (

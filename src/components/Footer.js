@@ -2,17 +2,17 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 const links = [
+  { label: 'About', href: '/about' },
   { label: 'Process', href: '/process' },
   { label: 'Requirements', href: '/requirements' },
-  { label: 'Services & Pricing', href: '/pricing' },
+  { label: 'Services', href: '/pricing' },
   { label: 'FAQ', href: '/faq' },
   { label: 'Contact', href: '/contact' },
 ];
 
 export default function Footer() {
   return (
-    <footer className="border-t border-[#1A1A1A] px-6 py-10 bg-[#0C0C0C]">
-      <br /> <br /> 
+    <footer className="mt-20 border-t border-[#1A1A1A] px-6 py-10 bg-[#0C0C0C]"> 
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6 flex-wrap">
           <motion.div
